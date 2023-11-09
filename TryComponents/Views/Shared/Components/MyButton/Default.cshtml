@@ -1,0 +1,18 @@
+@model TryComponents.Controllers.MyButtonType
+@{
+    string classButton = "btn ";
+
+    switch(Model) {
+        case TryComponents.Controllers.MyButtonType.Primary:
+            classButton += "btn-primary";
+            break;
+        case TryComponents.Controllers.MyButtonType.Secondary:
+            classButton += "btn-secondary";
+            break;
+        case TryComponents.Controllers.MyButtonType.Success:
+            classButton += "btn-success";
+            break;
+    }
+}
+
+<button type="button" class="@classButton">@ViewBag.Title</button>
